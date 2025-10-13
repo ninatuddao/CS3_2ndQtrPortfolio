@@ -1,29 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-  .box-sched {
-        background-color: rgba(255, 252, 243, 0.7);
-        border: 3px solid #6b705c;
-        border-radius: 20px;
-        padding: 20px;
-        width: fit-content;
-        margin: 40px auto;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(73, 85, 46, 0.2);
-        }
-         .box-sched h2 {
-        color: #506936dd;
-        }
-
-  </style>
-
-
-  <title>Tuddao Portfolio</title>
+   <title>Tuddao Portfolio</title>
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+ <style>
+       body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 20px;
+      text-align: center;
+      background-image: url('wooow.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .menu-box {
+      background: rgba(255, 255, 255, 0.55);
+      padding: 40px 80px;
+      border-radius: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      width: 900px; /* makes it more rectangular */
+      height: 250px; /* less tall */
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(6px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 30px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #007acc;
+    }
+  </style>
 </head>
 <body>
   <section class="w3-container">
+  <div class="menu-box">
    <h1>Links to Tuddao's work</h1>
     <nav>
       <ul>
@@ -31,5 +69,7 @@
         </li>
       </ul>
     </nav>
+    </div>
+    </section>
 </body>
 </html>
