@@ -14,14 +14,19 @@
             }
             .header{
                 overflow: hidden;
-                background-color: #ffffff;
+                background-color: #ebffe9;
                 padding: 30px 10px;
                 position: fixed;
                 top: 0;
                 width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                z-index: 1000;
             }
             .title{
-                font-family: Rockwell;
+                font-family: Rockwell, serif;
             }
             .header a{
                 float: left;
@@ -61,13 +66,33 @@
               color: rgb(194, 136, 158);
               border-radius: 5px;
             }
+            
+            main{
+              padding-top: calc(60px + 2em);
+            }
+            
+            @media (max-width: 600px){
+              .header{
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+              }
+              .hreader a{
+                padding: 8px 10px;
+                font-size: 16px;
+              }
+              main{
+                padding-top: calc(120px + 2em);
+              }
+            }
+            
 
         body {
           
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 20px;
         text-align: center;
-        background-color:#d1eabe;
+        background-color:#d9f5d9;
         margin: 0;
         padding: 0;
             
@@ -137,7 +162,17 @@
 
         </style>   
     </head>
-        
+<main>
+<div class="header">
+            <b><a href="#default" class="title">Potassium 2029 Schedules!</a></b>
+            <div class="header-right">
+                <a class="monday" href="https://1sacodez.github.io/CS3_2ndQtrPortfolio/public/2Q1GPotassiumBuban.html">Monday</a>
+                <a class="tuesday" href="https://b2029artbalingit.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumBalingit.html">Tuesday</a>
+                <a class="nav-link thursday active" href="https://ninatuddao.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumTuddao.html">Thursday</a>
+                <a class="friday" href="https://ejmpurisima.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumPurisima.html">Friday</a>
+            </div>
+            </div>
+        </main>
 <body>
 <table class ="center">
     
@@ -176,7 +211,7 @@ td,th {
         transition: 0.3s;
         }
         .box-sched {
-        background-color: rgba(255, 252, 243, 0.7);
+        background-color: rgba(236, 255, 231, 0.7);
         border: 3px solid #6b705c;
         border-bottom: none;
         border-radius: 20px;
@@ -264,15 +299,7 @@ td,th {
       </body>
 </html>
 
-<div class="header">
-            <b><a href="#default" class="title">Potassium 2029 Schedules!</a></b>
-            <div class="header-right">
-                <a class="monday" href="https://1sacodez.github.io/CS3_2ndQtrPortfolio/public/2Q1GPotassiumBuban.html">Monday</a>
-                <a class="tuesday" href="https://b2029artbalingit.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumBalingit.html">Tuesday</a>
-                <a class="nav-link thursday active" href="https://ninatuddao.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumTuddao.html">Thursday</a>
-                <a class="friday" href="https://ejmpurisima.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumPurisima.html">Friday</a>
-            </div>
-            </div>
+
 
 <div class="footer">
     <h2> Nice! You made it! Only one more day until the weekend...</h2>
