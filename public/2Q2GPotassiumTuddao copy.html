@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Header Thing!</title>
+        <meta name="viewport" content="width=device-width, initia-scale=1">
+        <style> 
+            * {
+                box-sizing: border-box;
+            }
+            body{
+                font-family: Trebuchet MS;
+                margin: 0;
+            }
+            .header{
+                overflow: hidden;
+                background-color: #ffffff;
+                padding: 30px 10px;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
+            .title{
+                font-family: Rockwell;
+            }
+            .header a{
+                float: left;
+                color: black;
+                text-align: center;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 20px; 
+                line-height: 25px;
+                border-radius: 4px;
+            }
+            .monday:hover{
+                background-color: pink;
+                color: rgb(194, 136, 158);
+                border-radius: 5px;
+            }
+            .tuesday:hover{
+                background-color: #FFF988;
+                color: #C5BE62;
+                border-radius: 5px;
+                }
+            .thursday:hover{
+                background-color: #C5FFB4;
+                color: #7FBC6C;
+                border-radius: 5px;
+                }
+            .friday:hover{
+                background-color: #B3F4FF;
+                color: #6EA8C7;
+                border-radius: 5px;
+                }
+            .header-right{
+                float: right;
+            }
+            .nav-link.active{
+              background-color: pink;
+              color: rgb(194, 136, 158);
+              border-radius: 5px;
+            }
+
+        body {
+          
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        text-align: center;
+        background-color:#d1eabe;
+        margin: 0;
+        padding: 0;
+            
+            
+        }
+.footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      padding: 40px 20px;
+      margin: 50px auto;
+      background-color: #f9fff8;
+      border-radius: 25px;
+      border: 4px double #668561;
+      box-shadow: 0 10px 25px rgba(79, 134, 79, 0.4);
+      width: 80%;
+    }
+    .media-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      width: 90%;
+    }
+    .footer img,
+    .footer iframe {
+      width: 80%;
+      max-width: 500px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(255, 204, 128, 0.4);
+      display: block;
+      margin: 15px auto;
+      margin-top: 20px;
+      border: 4px solid #53704d;
+      background-color: #f9fff8;
+      transition: all 0.3s ease;
+    }
+    .footer img:hover,
+    .footer iframe:hover {
+      transform: scale(1.05); 
+      box-shadow: 0 8px 25px rgba(60, 97, 56, 0.6);
+      transition: all 0.3s ease; 
+      z-index: 5; 
+    }
+    .footer p {
+      width: 80%;
+      font-size: 1.1rem;
+      color: #4E342E;
+      text-align: justify;
+      line-height: 1.8;
+    }
+    a:link {
+      color: #3E2723;
+      text-decoration: none;
+    }
+    a:visited {
+      color: #5D4037;
+    }
+    a:hover {
+      color: #BF360C;
+      text-decoration: underline;
+    }
+
+        
+
+        </style>   
+    </head>
+        
+<body>
+
+<table class ="center">
+    
+    <style>
+        table 
+            tr:nth-child(even) {
+        background-color: rgb(239, 255, 238);
+        }
+        
+        tr:nth-child(odd) {
+        background-color: #a7c292
+        }
+        .footer h3, .footer p {
+        text-align: center;
+        max-width: 800px;
+        margin: 10px auto;
+        line-height: 1.4;
+        color: #506936dd;
+        }
+        .footer h2 {
+        color: #506936dd;
+        }
+        .sched-link {
+        
+        display: inline-block;
+        font-size: 28px;
+        font-weight: bold;
+        color: #5e734b;  
+        text-decoration: none; 
+        transition: all 0.3s ease;
+        }
+
+        .sched-link:hover {
+        color: #8aae6a;     
+        text-decoration: underline; 
+        transform: scale(1.05); 
+        }
+
+        ul, ol {
+        list-style-type: none;
+        list-style: none;
+        padding-left: 0;
+        margin-left: 0;
+        }
+        .box-sched {
+        background-color: rgba(255, 252, 243, 0.7);
+        border: 3px solid #6b705c;
+        border-bottom: none;
+        border-radius: 20px;
+        line-height: 7px;
+        padding: 8px;
+        width: 100%;
+        margin: 0;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(73, 85, 46, 0.2);
+        }
+         .box-sched h2 {
+        color: #506936dd;
+        }
+        .copyright {
+        color: #506936;         
+        font-size: 20px;  
+        font-style: italic;  
+        text-align: center;  
+        margin-top: 20px;   
+        font-weight: 100;
+        }
+    </style>
+
+
+
+    <tr>
+        <th> Time </th>
+        <th> Subject </th>
+        <th> Notes </th>
+       
+
+    </tr>
+    <tr>
+        <td> 7:30 AM - 8:15 AM</td>
+        <td rowspan="2" > Biology!🌿</td>
+        <td rowspan="2" > 🧬Lecture/Lab Activity.ᐟ.ᐟ</td>
+        </tr>
+        <tr> 
+            <td> 8:15 AM - 9:00 AM</td> 
+    </tr>
+    <tr>
+        <td>9:10 AM - 9:55 AM</td>
+        <td rowspan="2" > Chemistry!🧪</td>
+        <td rowspan = "2" > ⚗️Lecture on Common Polyatomic Ions⋆˚꩜｡</td>
+    </tr>
+    <tr>
+        <td> 9:55 AM - 10:40 AM</td>
+    </tr>
+    <tr>
+        <td>10:40 AM -12:10 PM</td>
+        <td> Study Period!📝</td>
+        <td> 💫Eat!! Or study (optional) </td>
+    </tr>
+
+    <tr>
+        <td> 11:25 AM - 12:10 PM</td>
+        <td> Filipino!📖</td>
+        <td> 🕺Sayawit Practice/Lecture ˙𐃷˙</td>
+    </tr>
+    <tr>
+        <td> 12:20 PM - 1:05 PM</td>
+        <td> Lunch!🥪</td>
+        <td> nomnomnomnom👅</td>
+    </tr>
+    <tr>
+        <td> 1:05 PM - 1:50 PM</td>
+        <td> Statistics! 📊</td>
+        <td> 📈Experimental Design/Group Project⋆˙⟡</td>
+    </tr>
+    <tr>
+        <td> 1:50 PM - 2:35 PM</td>
+        <td> Values Education! ❣️</td>
+        <td> New Lesson/Worksheet🫧</td>
+    </tr>
+    <tr>
+        <td> 2:45 PM - 3:30 PM</td>
+        <td rowspan="2" > Physical Education! 🏃</td>
+        <td rowspan="2" >💧Exercise/Handballᶻ 𝗓 𐰁</td>
+    </tr>
+    <tr>
+        <td> 3:30 PM - 4:15 PM</td>
+    </tr>
+</table>
+
+
+
+      </body>
+</html>
+
+<div class="header">
+            <b><a href="#default" class="title">Potassium 2029 Schedules!</a></b>
+            <div class="header-right">
+                <a class="monday" href="https://1sacodez.github.io/CS3_2ndQtrPortfolio/public/2Q1GPotassiumBuban.html">Monday</a>
+                <a class="tuesday" href="https://b2029artbalingit.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumBalingit.html">Tuesday</a>
+                <a class="nav-link thursday active" href="https://ninatuddao.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumTuddao.html">Thursday</a>
+                <a class="friday" href="https://ejmpurisima.github.io/CS3_1stQtrPortfolio/public/2Q1GPotassiumPurisima.html">Friday</a>
+            </div>
+            </div>
+
+<div class="footer">
+    <h2> Nice! You made it! Only one more day until the weekend...</h2>
+    <h2> Here! Take a break and play UNO by watching this video ʚɞ</h2>
+
+    <iframe src="https://www.youtube.com/embed/w_yJ2iA5zR0" width= "800" height="450" title="Make Burger"></iframe>
+    <h3> I chose this video because UNO is my favorite game ever! 
+        Jk it's because I didn't know what else to put ( ꩜ ᯅ ꩜;)⁭ ⁭</h3>
+    <h3> Anyway it's important to take breaks (especially after PE) so sit back and relax before doing anything else! </h3>
+
+    <img src="smiski.jpg" class="bottom-photo">
+
+    <h3> I chose this photo because you have to lock back in for Friday!!</h3>
+    <h3> Also it matches the green theme...</h3>
+</div>
+<div class="box-sched">
+    <p class="copyright">&copy; 2025 Balingit • Buban • Purisima • Tuddao</p>
+
+</div>
