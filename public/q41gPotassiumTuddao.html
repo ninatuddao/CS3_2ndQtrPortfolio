@@ -133,7 +133,7 @@
         });
     }
 
-    function addMovie() {
+     function addMovie() {
         const title = document.getElementById('title').value;
         const year = document.getElementById('year').value;
         const genre = document.getElementById('genre').value;
@@ -145,17 +145,32 @@
 
         const newMovie = {
             title: title,
-            year: year,
+            year: Number(year),
             genre: genre,
-            rating: currentRating
+            rating: Number(currentRating),
+            counter: 1,
         };
 
         const movies = JSON.parse(localStorage.getItem('movies')) || [];
-        movies.push(newMovie);
+        
+        const existingMovie = movies.find(movie => movie.title.toLowerCase() === title.toLowerCase())
+        if (existingMovie){
+            existingMovie.counter += 1;
+            let averageRate = (existingMovie.rating * (existingMovie.counter - 1) + Number(currentRating)) / existingMovie.counter;
+            
+            if (averageRate % 1 >= 0.5){ 
+                existingMovie.rating = Math.ceil(averageRate);
+            }
+            else { existingMovie.rating = Math.floor(averageRate) }
+
+        }
+        else { movies.push(newMovie); }
+
+
         
         localStorage.setItem('movies', JSON.stringify(movies));
         clearForm();
-        displayMovies();
+        displayMov();
     }
 
     function clearForm() {
@@ -165,24 +180,43 @@
         updateStars(0);
     }
 
-    function displayMovies() {
-        const listDiv = document.getElementById('movieList');
-        const movies = JSON.parse(localStorage.getItem('movies')) || [];
-        
-        listDiv.innerHTML = '';
+    function displayMov(){
+    const movies = JSON.parse(localStorage.getItem('movies')) || [];
+    const movList = document.getElementById('movieList'); 
+    movList.innerHTML = '';
 
-        movies.forEach(movie => {
-            const starString = '★'.repeat(movie.rating);
-            const movieCard = document.createElement('div');
-            movieCard.className = 'movie-item';
-            movieCard.innerHTML = `
-                <strong>${movie.title} (${movie.year})</strong> - ${movie.genre}, 
-                Rating: <span class="yellow-text">${starString}</span>
-            `;
-            listDiv.appendChild(movieCard);
-        });
+    movies.forEach((movie, index) => {
+
+        if (typeof movie.title !== "string") return;
+
+        const rating = Number(movie.rating) || 0;
+        const starString = '★'.repeat(rating);
+
+        const movieItem = document.createElement('div');
+        movieItem.className = 'movie-item'; 
+
+        movieItem.innerHTML = `
+            <strong>${movie.title} (${movie.year})</strong> - ${movie.genre}, 
+            Rating: <span class="yellow-text">${starString}</span> <button onclick = "deleteMovie(${index})">Delete</button>
+        `;
+        
+        movList.appendChild(movieItem); 
+    });
     }
-    displayMovies();
+
+    function deleteMovie(index){
+        if (confirm("Are you sure you want to delete this movie?")){
+            let currentMovies = JSON.parse(localStorage.getItem('movies')) || []
+            currentMovies.splice(index, 1);
+            localStorage.setItem('movies', JSON.stringify(currentMovies));
+
+            displayMov();
+        }
+    }
+
+
+    displayMov();
+
 </script>
 
 </body>
