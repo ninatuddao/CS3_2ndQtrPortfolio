@@ -20,8 +20,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="author" content="<your names>" />
-  <meta name="revised" content="<date today>" />
+  <meta name="author" content="<TUDDAO>" />
+  <meta name="revised" content="<27/03/2026>" />
   <style>
     body { font-family: Arial, sans-serif; }
     .header, .footer {
@@ -35,6 +35,7 @@
       background: lightgreen;
       width: 150px;
       height: 200px;
+      
     }
     .content {
       background: lightyellow;
@@ -56,18 +57,21 @@
 - Add in css ```position: relative; top: 20px; left: 20px;``` to .sidebar.
 
 - Guided Question: What changed compared to the default static positioning? Try to give different values to top and left or you can change it to bottom, right.
+-  The sidebar box moves diagonally downwards instead of being against the corner of the webpage in the original. The spacing at the top and left of the box increases or decreases depending on the value you give for the px.
 
 ### Step 2 (Fixed):
 
 - Add in css ```position: fixed; bottom: 0; width: 100%;``` to .footer.
 
 - Guided Question: What happens when you scroll the page? Why does the footer behave differently from position relative?
+- The footer behaves differently becase we used position fixed instead of relative, which makes the element stays in the same spot and follows the user scrolls.
 
 ### Step 3 (Absolute):
 
 - Add in css ```position: absolute; top: 66px; left: 200px;``` to .content.
 
 - Guided Question: What is the effect of position: absolute on an element? How is it different from fixed?
+- Position: absolute will make the element stay in the exact same spot and not move when the user scrolls. On the other hand, when we use position: fixed, it would stay in the users view regardless of where the user scrolls.
 
 ### Step 4 : (Absolute)
 
@@ -83,22 +87,27 @@
     z-index: 2;
 }
 ```
-
 - Give .content a z-index: 1.
 
 - Guided Question: Why does the notice appear on top of the content? What happens if you swap the z‑index values?
+- The notice appears on top of the content because we edited the z-index value to 1. Swapping the value of the z-index controls whether the element is in front of behind other elements.
 
 - Challenge: 
     * What changes that you have to do on the code that will position .notice box on the top right corner of the .content box? Please write the code on paper as well (both html and css on the part of .notice and .content).
+    - I simply adjusted the px values of the top and left in the .notice box until it aligned to the top right corner of the .content box.
     * Try to change the position of .content to relative then to fixed. What do you observed each time?
+    - The .content box moved from the upper portion of the page to the lower portion of the page.
     * What do you observe on about the effect of z-index on .notice and .content boxes?
+    - The z-index controls which elements are on top or behind each element.
 
 3. Please answer the following reflection questions (15 minutes)
 
     a. Could you summarize the differences between the CSS position values (static, relative, absolute, fixed)? 
-
+    - Static position is the default positioning which follows the flow of the document. Relative positioning also follows the flow of the document but you can adjust its position (top, right, left, bottom). Absolute positioning allows you to place an element anywhere on the webpage without following the natural flow of the document. Lastly, fixed positioning will allow you to place an element anywhere but it will follow the behavior of the viewport/browser window.
     b. How does absolute positioning depend on its parent element?
+    - Absolute positioning is relative to its nearest ancestor that has a position value.
 
     c. How do you differentiate sticky from fixed (you can research on sticky)?
-
+     - Fixed positioning will follow the behaviour of the viewport window but stay in the same spot, while sticky will follow the viewport window but it will get pushed around depending on how the user scrolls up and down.
     d. If you were designing a webpage for a school event, how might you use positioning to highlight important information? Please give concrete examples.
+     - I would use specific positioning to make sure that the elements I want to show will be displayed properly for users. An example could be using fixed for navigation bars which is important so the user can easily access it when they need to visit other webpages. Another could be using the absolute positioning so that the information/element will be fixed and formatted properly in the right spots which would allow users to read through the website with ease.
